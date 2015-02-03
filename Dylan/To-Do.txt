@@ -1,0 +1,13 @@
+Primary:
+Character Selection
+End/Win/Lose Screen
+Enemies
+GUI
+Instructions/Hints
+Level Selection
+Opening Cinematic
+
+Secondary:
+Animated Character Selection
+Closing Cinematic
+Store

@@ -1,0 +1,11 @@
+Primary:
+Battery Pickups
+Flashlight
+Fragments
+GUI
+Overcharge Pickups
+
+Secondary:
+Boss Fight
+Environmental Hazard
+Store
