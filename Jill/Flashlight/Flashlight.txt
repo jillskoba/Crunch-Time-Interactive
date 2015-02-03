@@ -1,0 +1,11 @@
+Default usage:
+	- import 'Flashlight' package into Unity, and attach to character controller
+
+For Characters with built-in lights:
+	- import the package, but remove the red 'flashlight' object; apply the Flashlight script to the player instead (testing required)
+	- adjust the light and beam according to the character's height.
+
+
+About 'testEnemy'
+The testEnemy script is a test script for interaction between the 'light beam' and the enemy. In order to use it properly, drop the script onto an enemy, and tag them as 'enemy' in the inspector. Create a 'lightbeam' tag as well, and ensure that the 'Light' mesh has this tag.
+Enemies should have a public variable called deathTime (already built into the script), which is unique to different enemy types. This determines how long the enemy must remain in the light before being killed.
