@@ -1,0 +1,6 @@
+- Import PlayerController prefab (custom)
+- Drop player controller into scene
+- attach 'camera_follow' script onto Camera
+- Everything else should still remain attached because of the dependencies being imported. If not:
+	- Flashight script: drop the Spotlight attached to the object into the inspector under 'Flashlight'
+	- playerCollisions: Under the 'GameObject' in the Player, drop the Flashlight script in the inspector under 'Flashlight Script'
