@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerController.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\light.js">
     <Files>
-      <File FileName="Assets\Scripts\playerController.js" Line="4" Column="35" />
+      <File FileName="Assets\Scripts\Pickup.js" Line="13" Column="21" />
+      <File FileName="Assets\Scripts\light.js" Line="39" Column="4" />
+      <File FileName="Assets\Scripts\playerController.js" Line="56" Column="219" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
