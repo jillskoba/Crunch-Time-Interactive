@@ -27,18 +27,18 @@ function Update () {
 		
 		beamDistance = beamDistance * direction;
 		
-		//Debug.DrawRay (playerPos,Vector3(beamDistance+(0.2*direction),1.3,0.6),Color.red);
-		//Debug.DrawRay (playerPos,Vector3(beamDistance+(0.1*direction),0.6,0.63),Color.red);
-		//Debug.DrawRay (playerPos,Vector3(beamDistance,-0,0.66),Color.red);
-		//Debug.DrawRay (playerPos,Vector3(beamDistance-(0.1*direction),-0.8,0.69),Color.red);
-		//Debug.DrawRay (playerPos,Vector3(beamDistance-(0.2*direction),-1.5,0.72),Color.red);
-		//Debug.DrawRay (playerPos,Vector3(beamDistance-(0.3*direction),-2.2,0.75),Color.red);
-		//Debug.DrawRay (playerPos,Vector3(beamDistance-(0.4*direction),-3,0.8),Color.red);
+		Debug.DrawRay (playerPos,Vector3(beamDistance+(0.2*direction),1.3,0.6),Color.red);
+			Debug.DrawRay (playerPos,Vector3(beamDistance+(0.1*direction),0.6,0.63),Color.red);
+			Debug.DrawRay (playerPos,Vector3(beamDistance,-0,0.66),Color.red);
+			Debug.DrawRay (playerPos,Vector3(beamDistance-(0.1*direction),-0.8,0.69),Color.red);
+			Debug.DrawRay (playerPos,Vector3(beamDistance-(0.2*direction),-1.5,0.72),Color.red);
+			Debug.DrawRay (playerPos,Vector3(beamDistance-(0.3*direction),-2.2,0.75),Color.red);
+			Debug.DrawRay (playerPos,Vector3(beamDistance-(0.4*direction),-3,0.8),Color.red);
 
 		if (Physics.Raycast (playerPos,Vector3(beamDistance+(0.2*direction),1.3,0.6), hit) || Physics.Raycast (playerPos,Vector3(beamDistance+(0.1*direction),0.6,0.63), hit) || Physics.Raycast (playerPos,Vector3(beamDistance,-0,0.66), hit) || Physics.Raycast (playerPos,Vector3(beamDistance-(0.1*direction),-0.8,0.69), hit) || Physics.Raycast (playerPos,Vector3(beamDistance-(0.2*direction),-1.5,0.72), hit) || Physics.Raycast (playerPos,Vector3(beamDistance-(0.3*direction),-2.2,0.75), hit) || Physics.Raycast (playerPos,Vector3(beamDistance-(0.4*direction),-3,0.8), hit)){
 			
 			 if ( hit.transform.gameObject.tag == "enemy") {
-			 Debug.DrawRay (playerPos,Vector3(beamDistance+(0.2*direction),1.3,0.6),Color.red);
+			Debug.DrawRay (playerPos,Vector3(beamDistance+(0.2*direction),1.3,0.6),Color.red);
 			Debug.DrawRay (playerPos,Vector3(beamDistance+(0.1*direction),0.6,0.63),Color.red);
 			Debug.DrawRay (playerPos,Vector3(beamDistance,-0,0.66),Color.red);
 			Debug.DrawRay (playerPos,Vector3(beamDistance-(0.1*direction),-0.8,0.69),Color.red);

@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 public var speed : float = 7;
-public var jumpHeight : float = 15;
+public var jumpHeight : float = 17;
 public var gravity : float = 38;
 private var targetRotation : int;
 
