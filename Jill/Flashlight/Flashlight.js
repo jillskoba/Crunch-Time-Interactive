@@ -1,7 +1,5 @@
 ﻿#pragma strict
 
-import System.Collections.Generic; //need this line to import dictionary
-
 var flashlight : Light;
 var beam: GameObject;
 var flickerSpeed : float = 0.7;
@@ -21,14 +19,6 @@ function Update () {
 	if (Input.GetButtonDown ("Fire1") && flashlightPower > 0){ 
 		lightOn = !lightOn;
 		flashlight.enabled = lightOn;
-	}
-	
-	if (Input.GetButtonDown ("Fire2")){ 
-		flashlightPower += 20;
-
-		// Prevents light from being off from flicker effect when power is recovered
-		lightOn = true;
-        flashlight.enabled = lightOn;
 	}
 	 
 	if (flashlightPower > 100) {
@@ -66,5 +56,5 @@ function OnTriggerEnter(hit : Collider) {
 	if (hit.tag == "enemy") {
 		Debug.Log("hit");
 		Destroy(hit.gameObject);
-	}
+	}	
 }
