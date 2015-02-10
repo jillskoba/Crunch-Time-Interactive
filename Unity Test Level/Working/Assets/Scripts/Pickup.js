@@ -1,10 +1,15 @@
 ﻿#pragma strict
 
 private var moveY : float;
-public var speed : float = 2;
-public var amplitude : float = 0.1;
-public var rotationSpeed : float = 1;
+private var speed : float;
+private var amplitude : float;
+private var rotationSpeed : float;
 function Start () {
+	if (gameObject.tag == "battery") {
+		speed = 2;
+		amplitude = 0.1;
+		rotationSpeed = 1;
+	}
 	moveY = transform.position.y;
 }
          
