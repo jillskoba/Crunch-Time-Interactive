@@ -1,14 +1,9 @@
 ﻿#pragma strict
 
-public var speed : float = 7;
-public var jumpHeight : float = 17;
-public var gravity : float = 38;
+public var speed : float;
+public var jumpHeight : float;
+public var gravity : float;
 private var targetRotation : int;
-
-
-//sp=10.76 jh=15, grav=35
-
-//curVel = Vector3.Lerp(curVel, vel, 5 friction friction * Time.deltaTime);
 
 rigidbody.useGravity = false;
 
@@ -36,6 +31,7 @@ function FixedUpdate () {
 	if(Input.GetButton("Jump") && isGrounded()){
 		rigidbody.velocity.y = jumpHeight;
 	}
+	
 }
 
 function OnTriggerEnter(hit : Collider){
@@ -62,13 +58,12 @@ function isGrounded(){
 	
 	//debug ray cast
 	var jumpLine : float = collider.bounds.size.y/2 +0.1;
-	//Debug.DrawRay (middle,Vector3(0,-jumpLine,0),Color.red);
-	//Debug.DrawRay (front,Vector3(0,-jumpLine,0),Color.red);
-	//Debug.DrawRay (back,Vector3(0,-jumpLine,0),Color.red);
+	Debug.DrawRay (middle,Vector3(0,-jumpLine,0),Color.red);
+	Debug.DrawRay (front,Vector3(0,-jumpLine,0),Color.red);
+	Debug.DrawRay (back,Vector3(0,-jumpLine,0),Color.red);
 	
 	if(Physics.Raycast(front, Vector3.down, collider.bounds.size.y/2 + 0.1) || Physics.Raycast(middle, Vector3.down, collider.bounds.size.y/2 + 0.1) || Physics.Raycast(back, Vector3.down, collider.bounds.size.y/2 + 0.1)){
 		return true;
 	}
 	return false;
 }
-
