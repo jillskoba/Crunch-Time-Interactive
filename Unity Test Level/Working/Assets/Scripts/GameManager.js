@@ -1,14 +1,30 @@
 ﻿#pragma strict
-
-private var target : GameObject;
-private var player : GameObject;
-private var playerString : String = "Player";
+var currentLevel : float = 0;
+var fragments : float = 0;
+var batteries : float = 0;
+var batteryLimit : float = 5;
 
 function Start() {
-	target = GameObject.Find("PlayerSpawn");
-	player = GameObject.Find("Player");
-	var character : GameObject = Instantiate(Resources.Load("Player")) as GameObject;
-	character.transform.parent = target.transform;
-	character.transform.localPosition = new Vector3(0,0,0);
+
 }
-	
+
+function PickupFragment () {
+	fragments += 1;
+}
+
+function PickupBattery () {
+	batteries += 1;
+}
+
+function UseBattery () {
+	batteries -= 1;
+}
+
+function Awake () {
+	DontDestroyOnLoad (gameObject);
+}
+
+function LoadNextLevel () {
+	currentLevel += 1;
+	Application.LoadLevel(currentLevel);
+}
