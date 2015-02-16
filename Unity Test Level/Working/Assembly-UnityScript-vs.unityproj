@@ -47,9 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Flashlight.js" />
+     <Compile Include="Assets\Scripts\GameManager.js" />
      <Compile Include="Assets\Scripts\Pickup.js" />
      <Compile Include="Assets\Scripts\camera_follow.js" />
      <Compile Include="Assets\Scripts\light.js" />
+     <Compile Include="Assets\Scripts\loadInfo.js" />
      <Compile Include="Assets\Scripts\platformMove.js" />
      <Compile Include="Assets\Scripts\playerCollisions.js" />
      <Compile Include="Assets\Scripts\playerController.js" />

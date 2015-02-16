@@ -13,7 +13,10 @@ function Update () {
 function OnTriggerEnter(hit : Collider) {
 	if (hit.tag == "battery") {
 		//var flashlightScript: Flashlight = GetComponent(Flashlight); 
-		
+		Destroy(hit.gameObject);
+	}
+	if (hit.tag == "fragment") {
+		//var flashlightScript: Flashlight = GetComponent(Flashlight); 
 		Destroy(hit.gameObject);
 	}
 }

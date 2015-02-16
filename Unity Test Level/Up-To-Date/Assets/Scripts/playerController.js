@@ -38,19 +38,6 @@ function FixedUpdate () {
 	}
 }
 
-function OnTriggerEnter(hit : Collider){
-	//handle wall collision
-	if(hit.tag == "wall"){
-		collider.material.staticFriction = 0;
-		collider.material.dynamicFriction = 0;
-	}
-	//handle moving platform collision
-	if(hit.tag == "movingplatform"){
-		collider.material.staticFriction = 1;
-		collider.material.dynamicFriction = 1;
-	}
-}
-
 function isGrounded(){
 	var front : Vector3 = transform.position;
 	front.x += 0.4;
