@@ -63,5 +63,5 @@ function turnLight (){
 	} else {
 		direction = -1;
 	}
-	Debug.Log(direction);
+	//Debug.Log(direction);
 }
