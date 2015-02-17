@@ -19,5 +19,13 @@ function OnTriggerExit(object : Collider){
 }
 function spawnEnemy(){
 	Debug.Log('Spawn Baddie!');
-
+	
+	var spawners :GameObject[] = GameObject.FindGameObjectsWithTag("cameraSpawn");
+	
+	var randomNum = Random.Range(0, (spawners.Length-1));
+	Debug.Log(spawners.Length);
+	Debug.Log(randomNum);
+	var position : Vector3 = spawners[randomNum].transform.position;
+	
+	Instantiate (enemy, position, Quaternion.identity);
 }

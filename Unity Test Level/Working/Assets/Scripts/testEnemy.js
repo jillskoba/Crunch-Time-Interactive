@@ -26,7 +26,6 @@ function OnTriggerExit(hit : Collider) {
 	if (hit.tag == "lightbeam"){
 		CancelInvoke("EnemyHit");
 		seconds = 0;
-		
 	}
 }
 
