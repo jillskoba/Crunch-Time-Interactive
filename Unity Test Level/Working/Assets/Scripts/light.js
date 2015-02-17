@@ -40,7 +40,7 @@ function Update () {
 		var direction : Vector3 = transform.TransformDirection(Vector3(1.3, 1.3, 50)).normalized;
    		var distance : int = 20;
    		var jlpRay = Physics.Raycast(transform.position,direction, distance);
-   		Debug.DrawRay(transform.position, direction * distance, Color.green);
+   		Debug.DrawRay(transform.position, Vector3.right * distance, Color.green);
 
 		//if (Physics.Raycast (playerPos,Vector3(beamDistance+(0.2*direction),1.3,0.6), hit) || Physics.Raycast (playerPos,Vector3(beamDistance+(0.1*direction),0.6,0.63), hit) || Physics.Raycast (playerPos,Vector3(beamDistance,-0,0.66), hit) || Physics.Raycast (playerPos,Vector3(beamDistance-(0.1*direction),-0.8,0.69), hit) || Physics.Raycast (playerPos,Vector3(beamDistance-(0.2*direction),-1.5,0.72), hit) || Physics.Raycast (playerPos,Vector3(beamDistance-(0.3*direction),-2.2,0.75), hit) || Physics.Raycast (playerPos,Vector3(beamDistance-(0.4*direction),-3,0.8), hit)){
 			//if (Physics.Raycast (playerPos,Vector3(beamDistance+(0.2*direction),1.3,0.6), hit) || Physics.Raycast (playerPos,Vector3(beamDistance+(0.1*direction),0.6,0.63), hit) || Physics.Raycast (playerPos,Vector3(beamDistance,-0,0.66), hit) || Physics.Raycast (playerPos,Vector3(beamDistance-(0.1*direction),-0.8,0.69), hit) || Physics.Raycast (playerPos,Vector3(beamDistance-(0.2*direction),-1.5,0.72), hit) || Physics.Raycast (playerPos,Vector3(beamDistance-(0.3*direction),-2.2,0.75), hit) || Physics.Raycast (playerPos,Vector3(beamDistance-(0.4*direction),-3,0.8), hit)){
@@ -49,7 +49,7 @@ function Update () {
 	        // }
 		//}
 		//
-		if (Physics.Raycast (transform.position, direction * distance, hit) ){
+		if (Physics.Raycast (transform.position, Vector3.right * distance, hit) ){
 			 if ( hit.transform.gameObject.tag == "enemy") {
 	             Debug.Log("Enemy Hit!");
 	         }
