@@ -80,7 +80,6 @@ function OnTriggerEnter (other : Collider) {
 			//Start countdown
 			Debug.Log('LIGHT HIT!');
 			Destroy(this.gameObject);
-			//InvokeRepeating("chaserHit", 1, 0); 
 		}
 	}
 	else{
@@ -93,6 +92,8 @@ function OnTriggerEnter (other : Collider) {
 function stun(){
 	//make the enemy stop moving
 	rigidbody.velocity = Vector3(0,0,0);
+	var child = transform.Find("Jump Collider");
+	child.active = true;
 	
 }
 function OnTriggerExit(other : Collider) {	
@@ -101,6 +102,9 @@ function OnTriggerExit(other : Collider) {
 		//seconds = 0;
 		if(enemyType == enemyTypes.A){
 			InvokeRepeating("patrol", stunTime, 1);
+			yield WaitForSeconds (stunTime);
+			var child = transform.Find("Jump Collider");
+			child.active = false;
 		}
 	}
 }

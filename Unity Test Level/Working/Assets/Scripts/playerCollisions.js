@@ -23,4 +23,20 @@ function OnTriggerEnter(hit : Collider) {
 	if (hit.tag == "levelend") {
 		gameManager.GetComponent(GameManager).LoadNextLevel();
 	}
+
+	if (hit.tag=='weakSpot'){
+		//rigidbody.velocity.y = jumpHeight;
+		Destroy(hit.gameObject.transform.parent.gameObject);
+		Debug.Log("EnemyHit");
+	}
+
+	if(hit.tag == "wall"){
+		collider.material.staticFriction = 0;
+		collider.material.dynamicFriction = 0;
+	}
+	//handle moving platform collision
+	if(hit.tag == "movingplatform"){
+		collider.material.staticFriction = 1;
+		collider.material.dynamicFriction = 1;
+	}
 }
