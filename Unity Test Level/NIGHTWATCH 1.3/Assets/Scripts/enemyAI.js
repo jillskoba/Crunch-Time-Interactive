@@ -1,4 +1,4 @@
-﻿#pragma strict
+#pragma strict
 //Empty Array of Waypoints
 var waypoint: Transform[];
 //Used to keep track on enemy Type B
@@ -75,11 +75,9 @@ function OnTriggerEnter (other : Collider) {
 	//If it's the player
 	if(other.tag == 'Player'){
 		if(enemyType == enemyTypes.B){
-			Debug.Log('Player hit! Do Damage!');
 			Destroy(this.gameObject);
 		}
 		if(enemyType == enemyTypes.C){
-		 Debug.Log('Player found! Fire!');
 		 CancelInvoke("search");
 		 InvokeRepeating("shoot", 0,fireRate);
 		}
@@ -139,7 +137,7 @@ function shoot(){
 }
 function clap(){
 	//clap animation, if player is in area, deal damage
-	Debug.Log('CLAP! Player is hit!');
+	//Debug.Log('CLAP! Player is hit!');
 }
 function OnTriggerExit(other : Collider) {
 	if(other.tag == 'Player'){
