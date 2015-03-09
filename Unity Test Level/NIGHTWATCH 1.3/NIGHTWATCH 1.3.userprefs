@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\Chris Class Project - Joe Collaboration\Assets\_SCRIPTS\CubeSelect.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerCollisions.js">
     <Files>
-      <File FileName="..\Chris Class Project - Joe Collaboration\Assets\_SCRIPTS\CubeSelect.js" Line="25" Column="19" />
-      <File FileName="..\Chris Class Project - Joe Collaboration\Assets\_SCRIPTS\Tower.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FlashlightLight.js" Line="239" Column="30" />
+      <File FileName="Assets\Scripts\playerCollisions.js" Line="46" Column="68" />
+      <File FileName="Assets\Scripts\enemyAI.js" Line="165" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
