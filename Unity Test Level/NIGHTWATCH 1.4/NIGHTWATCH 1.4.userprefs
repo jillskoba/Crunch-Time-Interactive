@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FlashlightLight.js">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\NIGHTWATCH 1.4.1\Assets\Scripts\playerController.js">
     <Files>
-      <File FileName="Assets\Scripts\GameManager.js" Line="71" Column="1" />
-      <File FileName="Assets\Scripts\playerController.js" Line="21" Column="2" />
-      <File FileName="Assets\Scripts\FlashlightLight.js" Line="40" Column="47" />
+      <File FileName="..\NIGHTWATCH 1.4.1\Assets\Scripts\playerController.js" Line="77" Column="61" />
+      <File FileName="..\NIGHTWATCH 1.4.1\Assets\Scripts\GameManager.js" Line="125" Column="2" />
+      <File FileName="..\NIGHTWATCH 1.4.1\Assets\Scripts\hint.js" Line="31" Column="3" />
+      <File FileName="..\NIGHTWATCH 1.4.1\Assets\Scripts\playerCollisions.js" Line="59" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

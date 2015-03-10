@@ -71,7 +71,6 @@ function chase(){
 
 }
 function OnTriggerEnter (other : Collider) {
-
 	//If it's the player
 	if(other.tag == 'Player'){
 		if(enemyType == enemyTypes.B){
@@ -110,6 +109,7 @@ function OnTriggerEnter (other : Collider) {
 }
 function stun(){
 	//make the enemy stop moving
+	CancelInvoke("patrol");
 	rigidbody.velocity = Vector3(0,0,0);
 	var child = transform.Find("Jump Collider");
 	child.active = true;
@@ -160,6 +160,9 @@ function OnTriggerExit(other : Collider) {
 			child.active = false;
 		}
 	}
+}
+function hide(){
+	
 }
 function EnemyHit () {
 	seconds += 1;
