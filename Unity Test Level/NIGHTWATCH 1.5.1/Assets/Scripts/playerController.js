@@ -54,6 +54,11 @@ function Update(){
 		//handle jump
 		if(Input.GetButton("Jump") && isGrounded()){
 			rigidbody.velocity.y = jumpHeight;
+			transform.Find("PlayerMesh").animation.Play("Jump");
+		}
+		
+		if(isGrounded() && !Input.GetButton("Jump")){
+			transform.Find("PlayerMesh").animation.Play("Walk");
 		}
 
 		//Item Use
