@@ -205,7 +205,6 @@ function flashLightHit() {
 				distanceBottom = hitBottom.distance;
 			}
 			if(hitBottom.collider.tag == 'enemy'){
-				Debug.Log('IS A BADDIE!');
 				isEnemy =true;
 				currentHit = hitTop;
 			}
@@ -218,27 +217,29 @@ function flashLightHit() {
 		Debug.DrawRay (center, Vector3(-distanceBottom,-distanceBottom*angleBottom,-beamZOffset), Color.red); //Bottom
 		
 	}
+	//If one raycast hits a enemy, run enemy behaviour
 	if(isEnemy==true){
 		enemyBehaviour();
 	}
 }
 //Uses current hit to figure out which enemy has the flashlight shown on them
 function enemyBehaviour(){
-var enemy : enemyAI = currentHit.collider.gameObject.GetComponent('enemyAI');
-if(enemy == null){
-	enemy = currentHit.collider.gameObject.transform.parent.gameObject.GetComponent('enemyAI');
-}
+	var enemy : enemyAI = currentHit.collider.gameObject.GetComponent('enemyAI');
 
+	//If the object returns null redefine enemy
+	if(enemy == null){
+		enemy = currentHit.collider.gameObject.transform.parent.gameObject.GetComponent('enemyAI');
+	}
+		if(enemy.enemyType == enemyTypes.A){
+		//stun enemy, need to figure out way to recall patrol
+		enemy.stun();
+	}
 	if(enemy.enemyType == enemyTypes.B){
 		Debug.Log('Destroyed A Chaser!');
 		Destroy(currentHit.collider.gameObject);
 	}
-	if(enemy.enemyType == enemyTypes.A){
-		//stun enemy, need to figure out way to recall patrol
-		enemy.stun();
-	}
 	if(enemy.enemyType == enemyTypes.D){
-		Destroy(enemy.gameObject.Find('Cylinder'));
+		Destroy(enemy.gameObject.Find('Model/Cylinder'));
 		enemy.collider.tag ="wall";
 	}
 	

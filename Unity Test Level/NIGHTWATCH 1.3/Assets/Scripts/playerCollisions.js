@@ -44,14 +44,13 @@ function OnTriggerEnter(hit : Collider) {
 	if(hit.tag == "enemy"){
 		
 		var enemy: enemyAI = hit.gameObject.GetComponent('enemyAI');
+		
+		//If enemy is undefined, find the enemy tag's parent
 		if(enemy == null){
 			enemy = hit.gameObject.transform.parent.gameObject.GetComponent('enemyAI');
 		}
 		Debug.Log('Player collided with enemy type ' + enemy.enemyType );
 		
-		if(enemy.enemyType == enemyTypes.A){
-			
-		}
 	}
 	
 	//For projectile shooter
