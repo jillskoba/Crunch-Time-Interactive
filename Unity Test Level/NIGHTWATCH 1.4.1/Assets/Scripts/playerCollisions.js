@@ -48,11 +48,16 @@ function OnTriggerEnter(hit : Collider) {
 	}
 	//Added Enemy Collisions, example enemy model hitboxes need light tweaking will fix later this week
 	if(hit.tag == "enemy"){
-		var enemy: enemyAI = hit.gameObject.GetComponent('enemyAI');
-		Debug.Log('Player collided with enemy type ' + enemy.enemyType );
-		
-		if(enemy.enemyType == enemyTypes.A){
-		
+		if (gameManager.GetComponent(GameManager).overchargeActive == true) {
+			Destroy(hit.gameObject);
+		} else {
+			var enemy: enemyAI = hit.gameObject.GetComponent('enemyAI');
+			//If enemy is undefined, find the enemy tag's parent
+			if(enemy == null){
+				enemy = hit.gameObject.transform.parent.gameObject.GetComponent('enemyAI');
+			}
+			Debug.Log('Player collided with enemy type ' + enemy.enemyType);
+			gameManager.GetComponent(GameManager).LoseHealth();
 		}
 	}
 	

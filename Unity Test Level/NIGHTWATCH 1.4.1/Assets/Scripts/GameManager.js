@@ -26,6 +26,7 @@ public var powerBar : Texture2D;
 public var powerBarEnd : Texture2D;
 
 public var inventoryPlate : Texture2D;
+public var highlight: Texture2D;
 
 //fragment icon dimensions
 public var fragmentIconWidth : float;
@@ -75,6 +76,11 @@ public var flashlightDecaySpeed : float = 25;
 public var flashlightRecoverPower : float = 20;
 public var lightOn : boolean = false;
 
+public var overchargeLength : float = 10;
+public var overchargeActive : boolean = false;
+
+public var powerupSelect : int = 1;
+
 
 //----------------------------------------------END DECLARATIONS------------------------------------
 
@@ -87,6 +93,7 @@ function Start() {
 	
 	InvokeRepeating("FlashlightPower", 1, .5); 
 	lightOn = false;
+	overchargeActive = false;
 	
 }
 
@@ -99,10 +106,10 @@ function Update() {
 		lightOn = !lightOn;
 	}
 	
-	//Consume Battery
-	if (Input.GetButtonDown ("Fire2") && flashlightPower < 100 && batteries > 0){ 
-		flashlightPower += flashlightRecoverPower;
-		UseBattery();
+	if(Input.GetAxis("Vertical") > 0) {
+		powerupSelect = 1;
+	} else if (Input.GetAxis("Vertical") < 0) {
+		powerupSelect = 2;
 	}
 	
 	//Keeps power from exceeding 100
@@ -111,9 +118,9 @@ function Update() {
 	}
 	
 	// Kills flashlight when it runs out of power
-        if (flashlightPower <= 0) {
-        	lightOn = false;
-        }
+    if (flashlightPower <= 0) {
+    	lightOn = false;
+    }
 	
 }
 
@@ -135,14 +142,12 @@ function LoseHealth () {
 	}
 }
 
-//----------FRAGMENTS----------
-
+//----------FRAGMENTS---------
 function PickupFragment () {
 	fragments += 1;
 }
 
 //----------BATTERIES----------
-
 function PickupBattery () {
 	if (batteries == 0) {
 		batteryItemIcon = Resources.Load("batteryIcon-Active") as Texture2D;
@@ -155,10 +160,10 @@ function UseBattery () {
 	if (batteries == 0) {
 		batteryItemIcon = Resources.Load("batteryIcon-Inactive") as Texture2D;
 	}
+	flashlightPower += flashlightRecoverPower;
 }
 
 //----------OVERCHARGE----------
-
 function PickupOvercharge () {
 	if (overcharge == 0) {
 			overchargeItemIcon = Resources.Load("overchargeIcon-Active") as Texture2D;
@@ -175,6 +180,15 @@ function UseOvercharge () {
 	if (overcharge == 0) {
 		overchargeItemIcon = Resources.Load("overchargeIcon-Inactive") as Texture2D;
 	}
+	overchargeActive = true;
+	audio.Play();
+	yield WaitForSeconds(overchargeLength);
+    overchargeCooldown();
+}
+
+function overchargeCooldown() {
+	overchargeActive = false;
+	audio.Pause();
 }
 
 //----------LEVEL----------
@@ -229,10 +243,18 @@ function OnGUI() {
 		GUI.Label(Rect(Screen.width - Screen.width + 36, Screen.height - 40,75,75), "<color=white>" + fragments + "</color>", whiteText); //fragment count
 		 
 		 //Inventory
-		 GUI.DrawTexture(new Rect(Screen.width / 2, Screen.height - 65, inventoryPlateWidth, inventoryPlateHeight), inventoryPlate); //inventory plate
-		 GUI.DrawTexture(new Rect(Screen.width / 2 + 29, Screen.height - 55, batteryIconWidth, batteryIconHeight), batteryItemIcon); //battery inventory icon
-		 GUI.DrawTexture(new Rect(Screen.width / 2 + 89, Screen.height - 55, overchargeIconWidth, overchargeIconHeight), overchargeItemIcon); //overcharge inventory icon
-		 GUI.Label(Rect(Screen.width / 2 + 53, Screen.height - 35,75,75), "<color=white>" + batteries + "</color>", whiteText); //battery count
-		 GUI.Label(Rect(Screen.width / 2 + 116, Screen.height - 35,75,75), "<color=white>" + overcharge + "</color>", whiteText); //overcharge count
+		 GUI.DrawTexture(new Rect(Screen.width - 68, 10, inventoryPlateWidth, inventoryPlateHeight), inventoryPlate); //inventory plate
+		 GUI.DrawTexture(new Rect(Screen.width - 49, 30, batteryIconWidth, batteryIconHeight), batteryItemIcon); //battery inventory icon
+		 GUI.DrawTexture(new Rect(Screen.width - 52, 95, overchargeIconWidth, overchargeIconHeight), overchargeItemIcon); //overcharge inventory icon
+		 GUI.Label(Rect(Screen.width - 27, 52,75,75), "<color=white>" + batteries + "</color>", whiteText); //battery count
+		 GUI.Label(Rect(Screen.width - 27, 115,75,75), "<color=white>" + overcharge + "</color>", whiteText); //overcharge count
+		 
+		 if (powerupSelect == 1) {
+		 	GUI.DrawTexture(Rect(Screen.width - 63, 25, 50, 50), highlight); //batteryHover
+		 }
+		 
+		 if (powerupSelect == 2) {
+		 	GUI.DrawTexture(Rect(Screen.width - 63, 88, 50, 50), highlight); //overchargeHover
+		 }
 	}
 }

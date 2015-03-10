@@ -52,10 +52,25 @@ function Update(){
 		rigidbody.velocity.y = jumpHeight;
 	}
 
-	//Overcharge Use Proxy
-	if(Input.GetButton("Fire3") && gameManager.GetComponent(GameManager).overcharge > 0){
-		gameManager.GetComponent(GameManager).UseOvercharge();
-		OverchargeActive();
+	//Item Use
+	if (Input.GetButtonDown ("Fire3")) {
+		if (gameManager.GetComponent(GameManager).powerupSelect == 1) { //Use Battery
+			if (gameManager.GetComponent(GameManager).flashlightPower < 100 && gameManager.GetComponent(GameManager).batteries > 0) {
+				gameManager.GetComponent(GameManager).UseBattery();
+			}
+		}
+		if (gameManager.GetComponent(GameManager).powerupSelect == 2) { //Use Overcharge
+			if (gameManager.GetComponent(GameManager).overcharge > 0) {
+				gameManager.GetComponent(GameManager).UseOvercharge();
+			}
+		}
+	}
+	
+	
+	if (gameManager.GetComponent(GameManager).overchargeActive == true) {
+		playerMesh.renderer.material = material2;
+	}else{
+		playerMesh.renderer.material = material1;
 	}
 	
 	//Check Game Manager flashlight boolean
@@ -81,20 +96,8 @@ function Update(){
 	        }
         }
 	}
-	
-	
-	
 }
 
-//Overcharge Effect
-function OverchargeActive() {
-	if (Random.value > 0.9 ){
-	        playerMesh.renderer.material = material2;
-	        Debug.Log("Blink");
-		}else{
-			playerMesh.renderer.material = material1;
-		}
-}
 
 function isGrounded(){
 	var front : Vector3 = transform.position;
