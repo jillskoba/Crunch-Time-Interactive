@@ -3,6 +3,7 @@
 var waypoint: Transform[];
 //Used to keep track on enemy Type B
 private var currentWaypoint: int = 0;
+private var stunned: boolean = false;
 
 //Used for enemies who die via light
 private var seconds: int = 0;
@@ -42,8 +43,13 @@ function Start (){
   	
 }
 function Update () {
-	
-	
+	//Check to see what type of enemy it is
+	if(enemyType == enemyTypes.A){
+		if(stunned==true){
+			InvokeRepeating("patrol", 0, 1);
+			stunned=false;
+		}
+	}
 }
 function patrol(){
 	if(currentWaypoint < waypoint.Length){
@@ -81,7 +87,7 @@ function OnTriggerEnter (other : Collider) {
 		 InvokeRepeating("shoot", 0,fireRate);
 		}
 		if(enemyType == enemyTypes.D){
-			InvokeRepeating("clap", 0,clapRate);
+			InvokeRepeating("clap", clapRate/2,clapRate);
 		}
 	}
 	//If it's the player's light
@@ -111,11 +117,15 @@ function stun(){
 	//make the enemy stop moving
 	CancelInvoke("patrol");
 	rigidbody.velocity = Vector3(0,0,0);
-	//this.gameObject.collider.active=false;
 	var child = transform.Find("Jump Collider");
 	child.active = true;
+
+	if(stunned== false){
+	yield WaitForSeconds (stunTime);
+	stunned = true;
+	}
 	
-}
+	}
 function search(){
 	//Look back and forth to find a player, stopping when they do
 	//Debug.Log('Looking for player!');
@@ -138,32 +148,26 @@ function shoot(){
 }
 function clap(){
 	//clap animation, if player is in area, deal damage
-	//Debug.Log('CLAP! Player is hit!');
+	var gameManager: GameObject = GameObject.Find("gameManager");
+	gameManager.GetComponent(GameManager).LoseHealth();
 }
 function OnTriggerExit(other : Collider) {
 	if(other.tag == 'Player'){
 		if(enemyType == enemyTypes.C){
 		 Debug.Log('Player lost! Stop the shooting!!');
 		 CancelInvoke("shoot");
-		 InvokeRepeating("search", 0,turnTime);
+		 InvokeRepeating("search", turnTime/2,turnTime);
 		}
 		if(enemyType == enemyTypes.D){
 			CancelInvoke("clap");
 		}
 	}	
-	if (other.tag == "lightbeam"){
-		//CancelInvoke("chaserHit");
-		//seconds = 0;
-		if(enemyType == enemyTypes.A){
-			InvokeRepeating("patrol", stunTime, 1);
-			yield WaitForSeconds (stunTime);
-			var child = transform.Find("Jump Collider");
-			child.active = false;
-		}
-	}
 }
 function hide(){
-	
+	Destroy(this.gameObject.Find('Model/Cylinder'));
+	this.gameObject.collider.enabled = false;
+	this.gameObject.Find('Model').tag ='wall';
+	CancelInvoke("clap");
 }
 function EnemyHit () {
 	seconds += 1;

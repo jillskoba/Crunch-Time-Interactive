@@ -64,6 +64,7 @@ function OnTriggerEnter(hit : Collider) {
 	//For projectile shooter
 	if(hit.tag == "projectile"){
 		Debug.Log('Hit By a projectile!');
+		gameManager.GetComponent(GameManager).LoseHealth();
 	}
 	
 }
