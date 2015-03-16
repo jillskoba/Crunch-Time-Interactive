@@ -31,7 +31,7 @@ function OnTriggerEnter(hit : Collider) {
 		gameManager.GetComponent(GameManager).LoadNextLevel();
 	}
 
-	if (hit.tag=='weakSpot'){
+	if (hit.tag=="weakSpot"){
 		//rigidbody.velocity.y = jumpHeight;
 		Destroy(hit.gameObject.transform.parent.gameObject);
 		Debug.Log("EnemyHit");
@@ -60,14 +60,16 @@ function OnTriggerEnter(hit : Collider) {
 			gameManager.GetComponent(GameManager).LoseHealth();
 		}
 	}
+
 	if(hit.tag == "killzone") {
-	gameManager.GetComponent(GameManager).characterDeath();
+		gameManager.GetComponent(GameManager).characterDeath();
 	}
+	
 	//For projectile shooter && environment damage
 	if(hit.tag == "hurtful"){
 		if(gameManager.GetComponent(GameManager).overchargeActive == false) {
-		Debug.Log('Hit By a projectile!');
-		gameManager.GetComponent(GameManager).LoseHealth();
+			Debug.Log('Hit By a projectile!');
+			gameManager.GetComponent(GameManager).LoseHealth();
 		}
 	}
 }

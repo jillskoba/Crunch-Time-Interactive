@@ -83,6 +83,10 @@ public var powerupSelect : int = 1;
 
 public var playerAlive : boolean = true;
 
+//--------Pause Screeen------------//
+private var isPaused: boolean = false;
+
+
 //----------------------------------------------END DECLARATIONS------------------------------------
 
 function Start() {
@@ -125,12 +129,18 @@ function Update() {
     if (flashlightPower <= 0) {
     	lightOn = false;
     }
-	
+	if(Input.GetButtonDown ("Cancel")){
+		if(isPaused){
+		Debug.Log('unpause!');
+		unpause();
+		}else{
+		Debug.Log('pause!');
+		pause();
+	}
+}
 }
 
-if(Input.GetKeyDown(KeyCode.Escape)){
-	Application.Quit();
-}
+
 
 
 //----------HEALTH----------
@@ -152,7 +162,16 @@ function LoseHealth () {
 		characterDeath();
 	}
 }
+//----------Pause---------
 
+function pause(){
+	isPaused = true;
+	Time.timeScale = 0;
+}
+function unpause(){
+	isPaused = false;
+	Time.timeScale = 1;
+}
 
 //----------Character Death--------
 function characterDeath() {

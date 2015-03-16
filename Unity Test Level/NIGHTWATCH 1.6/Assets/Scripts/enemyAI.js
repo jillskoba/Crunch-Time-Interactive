@@ -57,6 +57,7 @@ function patrol(){
 		var moveDirection: Vector3 = target - transform.position;
 		var velocity = moveDirection.normalized * speed;
 		
+		this.gameObject.transform.LookAt(target);
 		if(moveDirection.magnitude < .5){
 		currentWaypoint++;
 		}

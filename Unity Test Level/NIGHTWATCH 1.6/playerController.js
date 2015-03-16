@@ -5,9 +5,7 @@ public var jumpHeight : float = 17;
 public var gravity : float = 38;
 public var targetRotation : int;
 private var gameManager : GameObject;
-public var playerMesh : GameObject;
-public var material1 : Material;
-public var material2 : Material;
+private var playerMesh : GameObject;
 
 public var flashlight : Light;
 public var beam: GameObject;
@@ -25,12 +23,12 @@ function Start () {
 
 function FixedUpdate () {
 	transform.position.z = 0; //precaution to keep player from moving in the z direction
+
 if (gameManager.GetComponent(GameManager).playerAlive == true) {
 	rigidbody.AddForce(new Vector3(0,-gravity * rigidbody.mass,0)); //custom gravity formula
 	
 	//handle horz movement
 	rigidbody.velocity.x = speed * Input.GetAxis("Horizontal"); //left -1, right +1, default 0
-	
 	
 		if(!Input.GetAxis("Horizontal")){
 			rigidbody.velocity.x = 0;
@@ -42,17 +40,15 @@ if (gameManager.GetComponent(GameManager).playerAlive == true) {
 			targetRotation = 0;
 		}
 	
-	
-	//transform.eulerAngles.y = targetRotation;
-	transform.eulerAngles.y -= (transform.eulerAngles.y-targetRotation)/5;
-	}else {
-		rigidbody.isKinematic = false;
-		rigidbody.velocity.x = 0;
-	}
+		//transform.eulerAngles.y = targetRotation;
+		transform.eulerAngles.y -= (transform.eulerAngles.y-targetRotation)/5;
+	} else {
+			rigidbody.isKinematic = false;
+			rigidbody.velocity.x = 0;
+		}
 }
 
 function Update(){
-
 	if (gameManager.GetComponent(GameManager).playerAlive == true) {
 		//handle jump
 		if(Input.GetButton("Jump") && isGrounded()){
@@ -63,6 +59,8 @@ function Update(){
 		if(isGrounded() && !Input.GetButton("Jump")){
 			transform.Find("PlayerMesh").animation.Play("Walk");
 		}
+
+
 
 		//Item Use
 		if (Input.GetButtonDown ("Fire3")) {
@@ -78,13 +76,6 @@ function Update(){
 			}
 		}
 	}
-	
-	
-	// if (gameManager.GetComponent(GameManager).overchargeActive == true) {
-	// 	playerMesh.renderer.material = material2;
-	// }else{
-	// 	playerMesh.renderer.material = material1;
-	// }
 	
 	//Check Game Manager flashlight boolean
 	if(gameManager.GetComponent(GameManager).lightOn == true) {
