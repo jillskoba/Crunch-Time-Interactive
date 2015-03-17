@@ -1,0 +1,264 @@
+fileFormatVersion: 2
+guid: 009d272ea115e2b47bcfed017be0374a
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Head_Bone
+    100002: Head_Ctrl
+    100004: Hip_Bone
+    100006: Hip_Ctrl
+    100008: L_armBone
+    100010: L_legBone
+    100012: LArm_Ctrl
+    100014: LLeg_Ctrl
+    100016: Main_Ctrl
+    100018: R_armBone
+    100020: R_legBone
+    100022: RArm_Ctrl
+    100024: RLeg_Ctrl
+    100026: Robo_Toy_1
+    100028: //RootNode
+    400000: Head_Bone
+    400002: Head_Ctrl
+    400004: Hip_Bone
+    400006: Hip_Ctrl
+    400008: L_armBone
+    400010: L_legBone
+    400012: LArm_Ctrl
+    400014: LLeg_Ctrl
+    400016: Main_Ctrl
+    400018: R_armBone
+    400020: R_legBone
+    400022: RArm_Ctrl
+    400024: RLeg_Ctrl
+    400026: Robo_Toy_1
+    400028: //RootNode
+    4300000: Robo_Toy_1
+    7400000: Walk
+    7400002: Jump
+    7400004: Death
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Robo_Toy_1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/Head_Bone
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/LArm_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/LArm_Ctrl/L_armBone
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/RArm_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/RArm_Ctrl/R_armBone
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/Hip_Bone
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/LLeg_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/LLeg_Ctrl/L_legBone
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/RLeg_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/RLeg_Ctrl/R_legBone
+        weight: 1
+      - path: Robo_Toy_1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump
+      takeName: Take 001
+      firstFrame: 41
+      lastFrame: 53
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/Head_Bone
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/LArm_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/LArm_Ctrl/L_armBone
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/RArm_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/RArm_Ctrl/R_armBone
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/Hip_Bone
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/LLeg_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/LLeg_Ctrl/L_legBone
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/RLeg_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/RLeg_Ctrl/R_legBone
+        weight: 1
+      - path: Robo_Toy_1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death
+      takeName: Take 001
+      firstFrame: 99
+      lastFrame: 135
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/Head_Bone
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/LArm_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/LArm_Ctrl/L_armBone
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/RArm_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Head_Ctrl/RArm_Ctrl/R_armBone
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/Hip_Bone
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/LLeg_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/LLeg_Ctrl/L_legBone
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/RLeg_Ctrl
+        weight: 1
+      - path: Main_Ctrl/Hip_Ctrl/RLeg_Ctrl/R_legBone
+        weight: 1
+      - path: Robo_Toy_1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
