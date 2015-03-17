@@ -1,7 +1,7 @@
 ﻿#pragma strict
 public var damage : int = 1;
 public var lifeTime: float = 20;
-public var speed: float = 400;
+public var speed: float = 800;
 
 function Start () {
 	//Start Moving Projectile

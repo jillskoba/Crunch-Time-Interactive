@@ -60,10 +60,14 @@ function OnTriggerEnter(hit : Collider) {
 			gameManager.GetComponent(GameManager).LoseHealth();
 		}
 	}
-	
-	//For projectile shooter
-	if(hit.tag == "projectile"){
-		Debug.Log('Hit By a projectile!');
+	if(hit.tag == "killzone") {
+	gameManager.GetComponent(GameManager).characterDeath();
 	}
-	
+	//For projectile shooter && environment damage
+	if(hit.tag == "hurtful"){
+		if(gameManager.GetComponent(GameManager).overchargeActive == false) {
+		Debug.Log('Hit By a projectile!');
+		gameManager.GetComponent(GameManager).LoseHealth();
+		}
+	}
 }

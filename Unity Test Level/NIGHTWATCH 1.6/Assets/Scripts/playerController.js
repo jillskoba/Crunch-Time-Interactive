@@ -24,8 +24,8 @@ function Start () {
 }
 
 function FixedUpdate () {
-if (gameManager.GetComponent(GameManager).playerAlive == true) {
 	transform.position.z = 0; //precaution to keep player from moving in the z direction
+if (gameManager.GetComponent(GameManager).playerAlive == true) {
 	rigidbody.AddForce(new Vector3(0,-gravity * rigidbody.mass,0)); //custom gravity formula
 	
 	//handle horz movement
@@ -45,6 +45,9 @@ if (gameManager.GetComponent(GameManager).playerAlive == true) {
 	
 	//transform.eulerAngles.y = targetRotation;
 	transform.eulerAngles.y -= (transform.eulerAngles.y-targetRotation)/5;
+	}else {
+		rigidbody.isKinematic = false;
+		rigidbody.velocity.x = 0;
 	}
 }
 

@@ -551,7 +551,7 @@ function enemyBehaviour(){
 		Destroy(currentHit.collider.gameObject);
 	}
 	if(enemy.enemyType == enemyTypes.D){
-		Destroy(enemy.gameObject.Find('Model/Cylinder'));
-		enemy.collider.tag ="wall";
+		Debug.Log('Jack is hiding!');
+		enemy.hide();
 	}
 }
