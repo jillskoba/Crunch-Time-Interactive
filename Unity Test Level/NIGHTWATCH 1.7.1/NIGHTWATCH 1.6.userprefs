@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FlashlightLight.js">
+    <Files>
+      <File FileName="Assets\Scripts\GameManager.js" Line="333" Column="46" />
+      <File FileName="Assets\Scripts\spawnArea.js" Line="16" Column="30" />
+      <File FileName="Assets\Scripts\FlashlightLight.js" Line="379" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
