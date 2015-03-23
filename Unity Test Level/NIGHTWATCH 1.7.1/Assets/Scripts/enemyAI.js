@@ -65,6 +65,7 @@ function Update () {
 	}
 }
 function patrol(){
+	var model: Transform = gameObject.transform.Find('Monkey_out_01');
 	MoveTowardWaypoint();
 
 	if (Vector3.Distance(currentWaypoint.transform.position, transform.position) < minDistance){
@@ -72,8 +73,15 @@ function patrol(){
 		if (currentIndex > waypoints.length -1){
 			currentIndex = 0;
 		}
+		if(this.rigidbody.velocity.x < 0){
+			model.Rotate(0,90,0);
+
+		}if(this.rigidbody.velocity.x > 0){
+			model.Rotate(0,270,0);
+		}
 		currentWaypoint = waypoints[currentIndex];
-	}	
+	}
+	Debug.Log(model.rotation.y);
 }
 function MoveTowardWaypoint(): void{
 	var direction : Vector3 = currentWaypoint.transform.position- transform.position;

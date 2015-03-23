@@ -118,41 +118,44 @@ function Update() {
 	healthChunk = healthWidth / maxPlayerHealth * playerHealth;
 	powerChunk = powerWidth / maxPlayerPower * flashlightPower;
 	
-	if (playerAlive == true) {
-		//Activate Light
-		if (Input.GetButtonDown ("Fire1") && flashlightPower > 0){ 
-			lightOn = !lightOn;
+	if(!isPaused){
+		if (playerAlive == true) {
+			//Activate Light
+			if (Input.GetButtonDown ("Fire1") && flashlightPower > 0){ 
+				lightOn = !lightOn;
+			}
+			
+			if(Input.GetAxis("Vertical") > 0) {
+				powerupSelect = 1;
+			} else if (Input.GetAxis("Vertical") < 0) {
+				powerupSelect = 2;
+			}
 		}
 		
-		if(Input.GetAxis("Vertical") > 0) {
-			powerupSelect = 1;
-		} else if (Input.GetAxis("Vertical") < 0) {
-			powerupSelect = 2;
+		//Keeps power from exceeding 100
+		if (flashlightPower > 100) {
+			flashlightPower = 100;
 		}
-	}
-	
-	//Keeps power from exceeding 100
-	if (flashlightPower > 100) {
-		flashlightPower = 100;
-	}
-	
-	// Kills flashlight when it runs out of power
-    if (flashlightPower <= 0) {
-    	lightOn = false;
-    }
-
-
-	if(Input.GetKeyDown(KeyCode.Escape)){
-		Application.Quit();
-	}
-	
-	if(Input.GetButtonDown ("Cancel")){
-		if(isPaused){
-			Debug.Log('unpause!');
-			unpause();
-		}else{
+		
+		// Kills flashlight when it runs out of power
+	    if (flashlightPower <= 0) {
+	    	lightOn = false;
+	    }
+	    if(Input.GetButtonDown ("Cancel")){
 			Debug.Log('pause!');
 			pause();
+	}
+    }else{
+	//Used to keep track of pause screen
+		if(Input.GetButtonDown ("Fire1")){
+			unpause();
+		}
+		if(Input.GetButtonDown ("Jump")){
+			currentLevel = 1;
+			LoadLevel();
+		}
+		if(Input.GetButtonDown("Cancel")){
+			Application.Quit();
 		}
 	}
 }
@@ -281,6 +284,7 @@ function LoadNextLevel () {
 }
 
 function LoadLevel(){
+	isPaused = false;
 	Application.LoadLevel(currentLevel);
 }
 
@@ -315,6 +319,12 @@ function OnGUI() {
 	
 	if (Application.loadedLevel >= 2) { //if we're in an actual game level
 		if (playerAlive) {
+			if(isPaused){
+				GUI.Label (Rect (Screen.width/2-150, Screen.height/2-75, 300, 150), "<size=60><color=white>Pause!</color></size>", whiteText);
+				GUI.Label (Rect (Screen.width/2-120, Screen.height/2-10, 300, 150), "<size=10><color=white>Press left click to unpause! </color></size>", whiteText);
+				GUI.Label (Rect (Screen.width/2-120, Screen.height/2+10, 300, 150), "<size=10><color=white>Press space to change levels! </color></size>", whiteText);
+				GUI.Label (Rect (Screen.width/2-120, Screen.height/2+30, 300, 150), "<size=10><color=white>Press escape to exit game! </color></size>", whiteText);
+			}
 			//Health Bar
 			GUI.DrawTexture(Rect(statusTopMarginLeft, statusTopMarginTop,statusFrameWidth,statusFrameHeight), statusPlateBack); //status plate back
 			GUI.DrawTexture(Rect(statusTopMarginLeft + 34, statusTopMarginTop,healthChunk,healthHeight), healthBar); //health bar

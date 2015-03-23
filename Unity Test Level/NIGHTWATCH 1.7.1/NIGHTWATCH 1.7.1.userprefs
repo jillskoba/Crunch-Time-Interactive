@@ -1,11 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\enemyAI.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManager.js">
     <Files>
-      <File FileName="Assets\Scripts\enemyAI.js" Line="83" Column="4" />
-      <File FileName="Assets\Scripts\platformMove.js" Line="13" Column="19" />
-      <File FileName="Assets\Scripts\characterSelect.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\playerController.js" Line="46" Column="72" />
+      <File FileName="Assets\Scripts\GameManager.js" Line="326" Column="152" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
