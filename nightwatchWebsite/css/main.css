@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: 'PT Sans', sans-serif;
+	background: #333;
+	background-image: url("../images/background.jpg");
+	color: #fff;
+	height: 100%;
+}
+
+nav {
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+	border: none !important;
+}
+
+.buttonDark {
+	width: 100px;
+	background: #7a7a7a;
+	background-image: -webkit-linear-gradient(top, #7a7a7a, #575757);
+	background-image: -moz-linear-gradient(top, #7a7a7a, #575757);
+	background-image: -ms-linear-gradient(top, #7a7a7a, #575757);
+	background-image: -o-linear-gradient(top, #7a7a7a, #575757);
+	background-image: linear-gradient(to bottom, #7a7a7a, #575757);
+	border: none !important;
+	color: #ffffff;
+}
+
+.buttonDark:hover {
+	color: #ffffff;
+	background: #5e5e5e;
+	background-image: -webkit-linear-gradient(top, #5e5e5e, #333333);
+	background-image: -moz-linear-gradient(top, #5e5e5e, #333333);
+	background-image: -ms-linear-gradient(top, #5e5e5e, #333333);
+	background-image: -o-linear-gradient(top, #5e5e5e, #333333);
+	background-image: linear-gradient(to bottom, #5e5e5e, #333333);
+	text-decoration: none;
+}
+
+#cover {
+	background-color: black;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width:100%;
+}
+
+#mainContent {
+	display: none;
+	opacity: 0;
+}
+
+#cover #lead {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#coverLogo {
+	width: 500px;
+	height: 200px;
+	background-color: #333;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+.content {
+	display: none;
+	opacity: 0;	
+}
+
+.bottomLeft {
+	width: 450px;
+	float: left;
+	margin-left: 50px;
+	margin-top: 25px;
+}
+
+.bottomRight {
+	width: 450px;
+	float: right;
+	margin-right: 50px;
+	margin-top: 25px;
+}
+
+.bottomLeft ul{
+	margin-left: 40px;
+	margin-top: 75px;
+}
+
+.bottomRight ul,.bottomRight p{
+	margin-right: 40px;
+	margin-top: 75px;
+}
+
+.bottomRight ul li,.bottomLeft ul li{
+	list-style-type: none;
+}
+
+.paraList {
+	font-size: 0.75em;
+	padding-left: 0px;
+}
+
+.spacer {
+	margin-bottom: 20px;
+}
+
+.subheading {
+	font-size: 1.25em;
+}
