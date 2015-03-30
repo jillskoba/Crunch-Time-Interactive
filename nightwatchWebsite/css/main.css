@@ -3,6 +3,7 @@
 
 body {
 	font-family: 'PT Sans', sans-serif;
+	font-size: 100%;
 	background: #333;
 	background-image: url("../images/background.jpg");
 	color: #fff;
@@ -17,6 +18,12 @@ nav {
 }
 
 .buttonDark {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+
+	border-radius: 0px;
+	
 	width: 100px;
 	background: #7a7a7a;
 	background-image: -webkit-linear-gradient(top, #7a7a7a, #575757);
@@ -27,7 +34,6 @@ nav {
 	border: none !important;
 	color: #ffffff;
 }
-
 .buttonDark:hover {
 	color: #ffffff;
 	background: #5e5e5e;
@@ -51,7 +57,9 @@ nav {
 	display: none;
 	opacity: 0;
 }
-
+#myTab{
+	font-size: 1.45em;
+}
 #cover #lead {
     margin: 0;
     position: absolute;
@@ -118,4 +126,38 @@ nav {
 
 .subheading {
 	font-size: 1.25em;
+}
+
+/* General */
+.infoText{
+	font-size: 1.45em;
+	text-indent: 15px;
+	margin: 10px 0;
+}
+.center{
+	text-align: center;
+	margin: 0 auto;
+}
+/* About Page */
+
+#mainQuote{
+	text-align: center;
+	color:rgba(255,255,255,.8);
+	font-size: 2.75em;
+}
+#creedText{
+	margin-top: -15px;
+	font-size: .55em;
+	color:#ccc;
+	color:rgba(255,255,255,.8);
+	text-align: right;
+	font-style: italic;
+}
+.quotes{
+	font-size: .95em;
+}
+#meetCharacters{
+	width:50%;
+	margin: 20px auto;
+	text-align: center;
 }
