@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: d127b6f906872db4eb444644f63352ce
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Dummy002
+    100002: Dummy003
+    100004: Dummy004
+    100006: Dummy005
+    100008: Dummy010
+    100010: Dummy011
+    100012: Dummy012
+    100014: Dummy013
+    100016: Dummy014
+    100018: Dummy015
+    100020: //RootNode
+    100022: Object
+    100024: Object011
+    100026: Object013
+    100028: Object015
+    100030: Object016
+    100032: Object017
+    100034: Object018
+    100036: Object019
+    100038: Object020
+    100040: RoadKillOut001
+    400000: Dummy002
+    400002: Dummy003
+    400004: Dummy004
+    400006: Dummy005
+    400008: Dummy010
+    400010: Dummy011
+    400012: Dummy012
+    400014: Dummy013
+    400016: Dummy014
+    400018: Dummy015
+    400020: //RootNode
+    400022: Object
+    400024: Object011
+    400026: Object013
+    400028: Object015
+    400030: Object016
+    400032: Object017
+    400034: Object018
+    400036: Object019
+    400038: Object020
+    400040: RoadKillOut001
+    2300000: Object
+    2300002: Object011
+    2300004: Object013
+    2300006: Object015
+    2300008: Object016
+    2300010: Object017
+    2300012: Object018
+    2300014: Object019
+    2300016: Object020
+    2300018: RoadKillOut001
+    3300000: Object
+    3300002: Object011
+    3300004: Object013
+    3300006: Object015
+    3300008: Object016
+    3300010: Object017
+    3300012: Object018
+    3300014: Object019
+    3300016: Object020
+    3300018: RoadKillOut001
+    4300000: RoadKillOut001
+    4300002: Object011
+    4300004: Object016
+    4300006: Object019
+    4300008: Object020
+    4300010: Object
+    4300012: Object018
+    4300014: Object017
+    4300016: Object015
+    4300018: Object013
+    7400000: Take 001
+    7400002: Walk
+    7400004: Jump
+    7400006: Death
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 117
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dummy002
+        weight: 1
+      - path: Dummy002/Object015
+        weight: 1
+      - path: Dummy002/Object015/Dummy003
+        weight: 1
+      - path: Dummy002/Object015/Dummy003/Object013
+        weight: 1
+      - path: Dummy012
+        weight: 1
+      - path: Dummy012/Object018
+        weight: 1
+      - path: Dummy012/Object018/Dummy011
+        weight: 1
+      - path: Dummy012/Object018/Dummy011/Object017
+        weight: 1
+      - path: Dummy015
+        weight: 1
+      - path: Dummy015/RoadKillOut001
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004/Object011
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004/Object011/Dummy005
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004/Object011/Dummy005/Object016
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy010
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy010/Object
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013/Object019
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013/Object019/Dummy014
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013/Object019/Dummy014/Object020
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 40
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dummy002
+        weight: 1
+      - path: Dummy002/Object015
+        weight: 1
+      - path: Dummy002/Object015/Dummy003
+        weight: 1
+      - path: Dummy002/Object015/Dummy003/Object013
+        weight: 1
+      - path: Dummy012
+        weight: 1
+      - path: Dummy012/Object018
+        weight: 1
+      - path: Dummy012/Object018/Dummy011
+        weight: 1
+      - path: Dummy012/Object018/Dummy011/Object017
+        weight: 1
+      - path: Dummy015
+        weight: 1
+      - path: Dummy015/RoadKillOut001
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004/Object011
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004/Object011/Dummy005
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004/Object011/Dummy005/Object016
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy010
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy010/Object
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013/Object019
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013/Object019/Dummy014
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013/Object019/Dummy014/Object020
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dummy002
+        weight: 1
+      - path: Dummy002/Object015
+        weight: 1
+      - path: Dummy002/Object015/Dummy003
+        weight: 1
+      - path: Dummy002/Object015/Dummy003/Object013
+        weight: 1
+      - path: Dummy012
+        weight: 1
+      - path: Dummy012/Object018
+        weight: 1
+      - path: Dummy012/Object018/Dummy011
+        weight: 1
+      - path: Dummy012/Object018/Dummy011/Object017
+        weight: 1
+      - path: Dummy015
+        weight: 1
+      - path: Dummy015/RoadKillOut001
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004/Object011
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004/Object011/Dummy005
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004/Object011/Dummy005/Object016
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy010
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy010/Object
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013/Object019
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013/Object019/Dummy014
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013/Object019/Dummy014/Object020
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death
+      takeName: Take 001
+      firstFrame: 95
+      lastFrame: 117
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dummy002
+        weight: 1
+      - path: Dummy002/Object015
+        weight: 1
+      - path: Dummy002/Object015/Dummy003
+        weight: 1
+      - path: Dummy002/Object015/Dummy003/Object013
+        weight: 1
+      - path: Dummy012
+        weight: 1
+      - path: Dummy012/Object018
+        weight: 1
+      - path: Dummy012/Object018/Dummy011
+        weight: 1
+      - path: Dummy012/Object018/Dummy011/Object017
+        weight: 1
+      - path: Dummy015
+        weight: 1
+      - path: Dummy015/RoadKillOut001
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004/Object011
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004/Object011/Dummy005
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy004/Object011/Dummy005/Object016
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy010
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy010/Object
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013/Object019
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013/Object019/Dummy014
+        weight: 1
+      - path: Dummy015/RoadKillOut001/Dummy013/Object019/Dummy014/Object020
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

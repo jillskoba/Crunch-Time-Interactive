@@ -1,0 +1,110 @@
+fileFormatVersion: 2
+guid: 103bf77a43e111342815025e11c18bf3
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: L_Arm_Ctrl
+    100002: L_Arm_Ctrl001
+    100004: L_Arm_Ctrl002
+    100006: LArmBone
+    100008: LArmBone001
+    100010: LArmBone002
+    100012: Main_Bone
+    100014: Main_Bone001
+    100016: Main_Bone002
+    100018: Main_Ctrl
+    100020: Main_Ctrl001
+    100022: Main_Ctrl002
+    100024: R_Arm_Ctrl
+    100026: R_Arm_Ctrl001
+    100028: R_Arm_Ctrl002
+    100030: RArmBone
+    100032: RArmBone001
+    100034: RArmBone002
+    100036: //RootNode
+    100038: Shadow_Monster_Unwraped
+    100040: Shadow_Monster_Unwraped001
+    100042: Shadow_Monster_Unwraped002
+    400000: L_Arm_Ctrl
+    400002: L_Arm_Ctrl001
+    400004: L_Arm_Ctrl002
+    400006: LArmBone
+    400008: LArmBone001
+    400010: LArmBone002
+    400012: Main_Bone
+    400014: Main_Bone001
+    400016: Main_Bone002
+    400018: Main_Ctrl
+    400020: Main_Ctrl001
+    400022: Main_Ctrl002
+    400024: R_Arm_Ctrl
+    400026: R_Arm_Ctrl001
+    400028: R_Arm_Ctrl002
+    400030: RArmBone
+    400032: RArmBone001
+    400034: RArmBone002
+    400036: //RootNode
+    400038: Shadow_Monster_Unwraped
+    400040: Shadow_Monster_Unwraped001
+    400042: Shadow_Monster_Unwraped002
+    4300000: Shadow_Monster_Unwraped
+    4300002: Shadow_Monster_Unwraped001
+    4300004: Shadow_Monster_Unwraped002
+    9500000: //RootNode
+    13700000: Shadow_Monster_Unwraped
+    13700002: Shadow_Monster_Unwraped001
+    13700004: Shadow_Monster_Unwraped002
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
