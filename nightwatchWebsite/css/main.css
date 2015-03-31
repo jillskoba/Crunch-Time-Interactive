@@ -79,6 +79,11 @@ nav {
 	margin-top: 20px;
 	text-align: center;
 }
+#companyLogoSpot{
+	margin-top: 180px;
+	width: 100%;
+	text-align: center;
+}
 
 .hidden {
 	display: none;
@@ -174,5 +179,18 @@ nav {
 	border-bottom: 2px solid #ccc;
 	border-bottom: 2px solid rgba(255,255,255,.8);
 	margin: 10px 0;
+}
+/* Developer */
+#fullCompanyLogo{
+	width: 150px;
 
+}
+#staffTitle,#whoTitle{
+	text-align: center;
+	border-bottom: 2px solid #ccc;
+	border-bottom: 2px solid rgba(255,255,255,.8);
+}
+#staffList{
+	text-align: center;
+	list-style: none;
 }
