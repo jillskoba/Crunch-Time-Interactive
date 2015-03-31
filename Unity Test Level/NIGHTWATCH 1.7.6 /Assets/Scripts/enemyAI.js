@@ -173,8 +173,14 @@ function search(){
 	
 }
 function shoot(){
+	var model: Transform = gameObject.transform.Find('plants/model');
+
+	model.animation.Play();
+
 	var spawner: Transform = this.transform.Find("Spawner");
 	var clone : GameObject = Instantiate(projectile,  spawner.position, spawner.rotation);
+
+
 	
 }
 function clap(){

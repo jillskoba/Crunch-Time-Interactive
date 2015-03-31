@@ -1,0 +1,134 @@
+fileFormatVersion: 2
+guid: 33f0c8ff689d94d2886ea4bf9d03dfaf
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: IK Chain003
+    100002: ik001
+    100004: small
+    100006: smBone1
+    100008: smBone2
+    100010: smBone3
+    100012: smBone4
+    100014: smHelperlg001
+    100016: smHelpermiddle001
+    100018: smHelpersm001
+    100020: //RootNode
+    400000: IK Chain003
+    400002: ik001
+    400004: small
+    400006: smBone1
+    400008: smBone2
+    400010: smBone3
+    400012: smBone4
+    400014: smHelperlg001
+    400016: smHelpermiddle001
+    400018: smHelpersm001
+    400020: //RootNode
+    4300000: small
+    7400000: Shoot
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: small
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Shoot
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: IK Chain003
+        weight: 1
+      - path: IK Chain003/smHelpermiddle001
+        weight: 1
+      - path: IK Chain003/smHelpermiddle001/smHelperlg001
+        weight: 1
+      - path: IK Chain003/smHelpermiddle001/smHelperlg001/smHelpersm001
+        weight: 1
+      - path: small
+        weight: 1
+      - path: smBone1
+        weight: 1
+      - path: smBone1/smBone2
+        weight: 1
+      - path: smBone1/smBone2/smBone3
+        weight: 1
+      - path: smBone1/smBone2/smBone3/smBone4
+        weight: 1
+      - path: smBone1/smBone2/smBone3/smBone4/ik001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
