@@ -1,6 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+.centered {
+	text-align: center;
+}
+
 body {
 	font-family: 'Amatic SC', cursive;
 	font-size: 100%;
@@ -8,6 +12,19 @@ body {
 	background-image: url("../images/background.jpg");
 	color: #fff;
 	height: 100%;
+}
+
+.textCenter {
+	font-size: 24px;
+	text-align: center;
+}
+
+.subHeading {
+	font-size: 2em;
+}
+
+.navbar-brand {
+	font-size: 3em;
 }
 
 nav {
@@ -21,9 +38,7 @@ nav {
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	-ms-border-radius: 0px;
-
 	border-radius: 0px;
-	
 	width: 100px;
 	background: #7a7a7a;
 	background-image: -webkit-linear-gradient(top, #7a7a7a, #575757);
@@ -62,6 +77,7 @@ nav {
 	font-weight: bold;
 	font-size: 2.15em;
 }
+
 #cover #lead {
     margin: 0;
     position: absolute;
@@ -72,9 +88,6 @@ nav {
 }
 
 #coverLogo {
-	width: 500px;
-	height: 200px;
-	background-color: #333;
 	margin: 0 auto;
 	margin-top: 20px;
 	text-align: center;
@@ -94,46 +107,6 @@ nav {
 	opacity: 0;	
 }
 
-.bottomLeft {
-	width: 450px;
-	float: left;
-	margin-left: 50px;
-	margin-top: 25px;
-}
-
-.bottomRight {
-	width: 450px;
-	float: right;
-	margin-right: 50px;
-	margin-top: 25px;
-}
-
-.bottomLeft ul{
-	margin-left: 40px;
-	margin-top: 75px;
-}
-
-.bottomRight ul,.bottomRight p{
-	margin-right: 40px;
-	margin-top: 75px;
-}
-
-.bottomRight ul li,.bottomLeft ul li{
-	list-style-type: none;
-}
-
-.paraList {
-	font-size: 0.75em;
-	padding-left: 0px;
-}
-
-.spacer {
-	margin-bottom: 20px;
-}
-
-.subheading {
-	font-size: 1.25em;
-}
 
 /* General */
 .infoText{
@@ -170,6 +143,7 @@ nav {
 	margin: 20px auto;
 	text-align: center;
 }
+
 /* Characters Page */
 .characterName{
 	font-size: 2.85em;
@@ -180,6 +154,7 @@ nav {
 	border-bottom: 2px solid rgba(255,255,255,.8);
 	margin: 10px 0;
 }
+
 /* Developer */
 #fullCompanyLogo{
 	width: 150px;
