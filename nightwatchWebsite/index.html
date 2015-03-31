@@ -17,6 +17,7 @@
 	<link href="css/main.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Radley' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,6 +31,9 @@
     	<div id="coverLogo">LOGO</div>
     	<div id="lead">
     		<a href="#" id="enter" class="btn btn-lg buttonDark">Enter</a>
+    	</div>
+    	<div id='companyLogoSpot'>
+    		<img src="images/cilogo.svg" alt='Crunchtime Interactive'>
     	</div>
   </div>
 
@@ -76,7 +80,7 @@
 						<div class='col-md-1'></div>
 						<div class='col-md-10'>
 						<p class='infoText'>As the sun sets, the trusted toys of the watch begin their nightly duty, ready to fight against the forces of darkness and fear to protect their child. Armed with flashlights and full of hope, the heroic toys must make their way through the dark to destroy the root of their child’s fear.</p>
-						<p class='infoText'>Nightwatch is a 2D platformer about the unbreakable bonds that exist between a child and their toys. Players take on the role of one child’s toys, working to protect the boy as he slumbers. Explore a warped bedroom while fighting creatures from the darkness with light and discover what it truly means to be a hero.</p>
+						<p class='infoText'>Nightwatch is a 2.5D platformer about the unbreakable bonds that exist between a child and their toys. Players take on the role of one child’s toys, working to protect the boy as he slumbers. Explore a warped bedroom while fighting creatures from the darkness with light and discover what it truly means to be a hero.</p>
 						<div class='center'>
 							<a id='meetCharacters' href="#characters" data-toggle="tab" class="btn btn-lg buttonDark" onClick="swapActive()">Meet the Watch</a>
 						</div>
@@ -88,28 +92,90 @@
 	   		</div>
 	   		<div class="tab-pane fade" id="characters">
 				<div class="content">
-	  				<h2 class="hidden">Technology</h2>
-					<p>Aenean ut mauris finibus, imperdiet urna vitae, cursus leo. Aliquam purus ex, ultricies non magna sit amet, blandit placerat felis. Suspendisse euismod lacus sed augue ultrices tempor. Nulla facilisi. Fusce eget sollicitudin sapien. Mauris felis purus, cursus sit amet eleifend non, eleifend euismod mauris. Etiam vehicula arcu sed ex pulvinar maximus. Morbi eu ultricies ex. Morbi maximus tempor pharetra. Aliquam laoreet vitae dolor sit amet gravida. Quisque mollis odio in cursus ultricies. Nulla eget fringilla tortor. Vestibulum pellentesque ultrices sapien, feugiat egestas lectus feugiat eget. Nullam et quam id est vehicula placerat a sit amet ante. Nunc sit amet tempus augue.</p>
+	  				<h2 class="hidden">Characters</h2>
+					<div class="container">
+						<div class='row'>
+						<div class='col-md-1'></div>
+						<div class='col-md-10 heading'>
+						<p>Characters</p>
+						</div>
+						<div class='col-md-1'></div>
+						</div>
+						<div class='row'>
+						<div class='col-md-4'>
+							<div class='center'>
+								<img src='images/teddie.svg' alt ='Barry'>
+							</div>
+							<h3 class='characterName'>Barry</h3>
+							<p class='infoText'>The child’s first toy, Barry has been through everything, from the first day of school to sandboxes and the occasional laundry machine when the child isn’t looking. As the unofficial leader of the Nightwatch, the stuffed bear tends to order the group around much to the others’ distain.</p>
+						</div>
+						<div class='col-md-4'>
+							<div class='center'>
+								<img src='images/trex.svg' alt ='Rex'>
+							</div>
+							<h3 class='characterName'>Rex</h3>
+							<p class='infoText'>The newest member of the watch, Rex was acquired from a museum trip with the child’s grandparents. Having spent so much time in a place of learning the short armed reptile acquired a bit of an encyclopedic knowledge, able to recite interesting facts at will. Though he’s not the bravest warrior on the watch, he’s more than willing to help protect the child who gave him a home.</p>
+						</div>
+						<div class='col-md-4'>
+							<div class='center'>
+								<img src='images/lego.svg' alt ='Cubert'>
+							</div>
+							<h3 class='characterName'>Cubert</h3>
+							<p class='infoText'>A master of construction, demolition and getting sucked up by the vacuum, Cubert is the watch’s resident mechanic. Thanks to his patented cataswing technology, the group is able to fire off a multitude of batteries for them to use out in the darkness. With his mix of contraptions, this is definitely one toy the bad guys don’t want to mess with. </p>
+						</div>
+
+						</div>
+					</div>
 	        	</div>
 	   		</div>
 	   		<div class="tab-pane fade" id="gallery">
 	   			<div class="content">
-	   				<h2 class="hidden">Features</h2>
-					<p>Sed aliquam, risus sed ultrices viverra, lacus dui venenatis quam, id hendrerit orci tortor ut erat. Quisque id purus ex. Vestibulum condimentum purus sem. Duis luctus feugiat ligula eu porta. Praesent pellentesque dui a gravida convallis. Ut et nunc dignissim, auctor mauris ac, tempor diam. Nunc velit ante, ornare quis sem et, condimentum pretium metus. Sed porttitor turpis quis arcu eleifend iaculis. Sed at faucibus ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse tincidunt interdum ipsum nec pretium. Suspendisse facilisis pulvinar libero eu consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc volutpat nibh vel odio sodales, sed scelerisque diam vehicula. Integer vestibulum laoreet urna ac rhoncus.</p>
+	   				<h2 class="hidden">Gallery</h2>
+	   				
 	       		</div>
 	   		</div>
 			<div class="tab-pane fade" id="technology">
 	    		<div class="content">
-					<h2 class="hidden">Developer</h2>
+					<h2 class="hidden">Technology</h2>
 					<p>Phasellus suscipit a metus sit amet malesuada. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris condimentum molestie quam, ac rhoncus magna. Duis ut felis dolor. Vestibulum ipsum urna, laoreet quis cursus in, tristique et nulla. Curabitur posuere pharetra augue ac lacinia. Etiam turpis tortor, volutpat vel nunc eu, sodales porta erat. Sed ut quam malesuada, hendrerit lorem et, mattis eros. Nunc quis gravida eros. Sed suscipit ultrices elit ullamcorper ornare. Proin sollicitudin rutrum odio eget gravida. Donec in lacus in risus suscipit sagittis. Integer malesuada hendrerit lectus, efficitur congue urna commodo ac. Aenean feugiat lorem eget fermentum tempus. Phasellus sit amet sagittis massa.</p>
 	        	</div>
 	   		</div>
 	  		<div class="tab-pane fade" id="studio">
 	   			<div class="content">
-	   				<h2 class="hidden">Technology</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis leo bibendum, commodo tortor in, congue turpis. Duis consequat iaculis nisl vitae pharetra. Nam lacinia porttitor magna luctus finibus. Nam eget vulputate urna. In hac habitasse platea dictumst. Vivamus dapibus purus metus, pulvinar feugiat lacus consectetur sed. Quisque mattis a diam a porttitor. Donec in eros eget orci molestie porta non luctus velit. Ut a consectetur ex. Sed dolor sapien, hendrerit in enim a, scelerisque tempus tortor.</p>
-	        	</div>
-	   		</div>
+	   				<h2 class="hidden">Developer</h2>
+					<div class='container'>
+						<div class='row'>
+							<div class='col-md-1'></div>
+							<div class='col-md-10 heading'>
+							<img id='fullCompanyLogo' src='images/logotext.svg' alt='Crunchtime'>
+							</div>
+							<div class='col-md-1'></div>
+						</div>
+						<div class='row'>
+							<div class='col-md-1'></div>
+							<div class='col-md-10'>
+								<div class='row'>
+								<div class='col-md-6'><p class='heading' id='whoTitle'>About Us</p>
+								<p class='infoText'>We are an independent game studio made up of students from Fanshawe College.  To us, games are a way to be able to explore boundaries outside of what is possible with other mediums. Whether it’s designing functionality or modeling a character, we love learning and seeing how all these components blend together to create an interesting world. While this is homework for us, we sincerely hope that you as player enjoy the fruits of our labour! </p>
+								</div>
+								<div class='col-md-6'>
+									<p class='heading' id='staffTitle'> Crunchtime Interactive Staff</p>
+									<ul id='staffList'>
+										<li><p class='infoText'>David Krent</p></li>
+										<li><p class='infoText'>Jake Miller</p></li>
+										<li><p class='infoText'>Jill Skoblenick</p></li>
+										<li><p class='infoText'>Vishal Menon</p></li>
+										<li><p class='infoText'>Dylan Rieder</p></li>
+										<li><p class='infoText'>Nachiket Kulkarni</p></li>
+
+									</ul>
+								</div>
+								</div>
+							</div>
+							<div class='col-md-1'></div>
+						</div>
+					</div>
+	   			</div>
 		</div>
 	</div>
 	<script>
